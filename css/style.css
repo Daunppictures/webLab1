@@ -109,7 +109,17 @@ button {
 .header-nav-link {
 	color: var(--second-color);
 	font-weight: 400;
+	transition: all .2s ease-in-out;
 }
+.header-nav-item {
+	transition: all .2s ease-in-out;
+}
+.header-nav-item:hover {
+	transform: scale(1.1);
+	color: #202228;
+	transition: all .2s ease-in-out;
+}
+
 .button-sign-in {
 	border: none;
 	outline: none;
@@ -117,12 +127,23 @@ button {
 	padding: 0;
 	font-weight: 500;
 	padding: 0 30px 0 0;
+	transition: all .2s ease-in-out;
+}
+.button-sign-in:hover {
+	transform: scale(1.1);
+	transition: all .2s ease-in-out;
 }
 .button-sign-up {
 	background: none;
 	border: 1px solid var(--header-button-color);
 	border-radius: 50px;
 	padding: 13px 45px;
+	transition: all .2s ease-in-out;
+}
+.button-sign-up:hover {
+	background: var(--header-button-color);
+	color: #fff;
+	transition: all .2s ease-in-out;
 }
 
 
@@ -135,7 +156,8 @@ button {
 	padding: 121px 0 144px 0;
 }
 .main-info {
-	width: 555px;
+	max-width: 555px;
+	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -178,7 +200,11 @@ button {
 	outline: none;
 	z-index: 2;
 	padding: 0;
-
+	transition: all .2s ease-in-out;
+}
+.main-button:hover {
+	transform: scale(1.1);
+	transition: all .2s ease-in-out;
 }
 .main-button-shadow {
 	width: 211px;
@@ -254,7 +280,8 @@ button {
 	padding: 73px 0 0 0;
 }
 .reviews-title {
-	width: 393px;
+	max-width: 393px;
+	width: 100%;
 	font-weight: 500;
 	font-size: 35px;
 	line-height: 50px;
@@ -262,7 +289,8 @@ button {
 	margin: 0 0 10px 0;
 }
 .reviews-second-text {
-	width: 487px;
+	max-width: 487px;
+	width: 100%;
 	font-size: 16px;
 	line-height: 30px;
 	font-weight: 400;
@@ -277,7 +305,8 @@ button {
 	width: 100%;
 }
 .reviews-card-wrapper {
-	width: 350px;
+	max-width: 350px;
+	width: 100%;
 	height: 300px;
 	display: flex;
 	flex-direction: column;
@@ -442,6 +471,11 @@ button {
 	z-index: 2;
 	outline: none;
 	border: none;
+	transition: all .2s ease-in-out;
+}
+.subscribe-button:hover {
+	transform: scale(1.1);
+	transition: all .2s ease-in-out;
 }
 .subscribe-button-shadow {
 	width: 211px;
@@ -497,6 +531,11 @@ button {
 	position: absolute;
 	top: 0;
 	z-index: 2;
+	transition: all .2s ease-in-out;
+}
+.footer-contact-icon:hover {
+	transform: scale(1.1);
+	transition: all .2s ease-in-out;
 }
 .footer-contact-icon-shadow {
 	width: 100%;
@@ -537,6 +576,31 @@ button {
 	--footer-color: #F6F5F5;;
 }
 
+@media screen and (max-width: 400px) {
+	.subscribe-info {
+		width: 80% !important;
+		margin: 30px 0 0 15px !important;
+	}
+	.subscribe-card {
+		height: 280px !important;
+	}
+	.subscribe-button-wrapper {
+		margin: 0 0 0 15px !important;
+	}
+	.features {
+		height: 550px !important;
+	}
+	.features-img {
+		top: 278px !important;
+	}
+	.main-info {
+		height: 120% !important;
+	}
+	.main-img {
+		top: 197px !important;
+	}
+}
+
 @media screen and (max-width: 780px) {
 	.subscribe-title-text {
 		font-weight: 500;
@@ -547,26 +611,113 @@ button {
 		padding: 10px 0 0 0;
 	}
 	.subscribe-button-wrapper {
-		margin: 25px 30px 0 0;
+		margin: 0 0 0 30px;
 	}
 	.subscribe-info {
-		margin: 0 0 0 30px;
-		width: 300px;
+		margin: 30px 0 0 30px;
+		width: 100%;
+	}
+	.column {
+		flex-direction: column !important;
+		position: relative;
+	}
+	.main-info {
+		z-index: 2;
+		align-items: flex-end;
+	}
+	.main-img {
+		top: 160px;
+		position: absolute;
+		z-index: 1;
+	}
+	.introduction {
+		margin: 0 !important;
+	}
+	.main-button-wrapper {
+		margin-left: 290px;
+	}
+	.main-second-text {
+		font-size: 18px !important;
+		line-height: 35px !important;
+	}
+	.main-title-text {
+		font-size: 35px !important;
+	}
+	.features-column {
+		flex-direction: column;
+		align-items: center !important;
+		position: relative;
+	}
+	.features-img {
+		order: 2;
+		position: absolute;
+		z-index: 1;
+		top: 150px;
+	}
+	.features-info {
+		z-index: 2;
+	}
+	.features {
+		height: 425px;
+	}
+	.reviews-card-list {
+		flex-direction: column;
+		align-items: center;
+	}
+	.reviews-card-wrapper {
+		max-width: 560px;
+	}
+	.reviews-card-header {
+		flex-direction: row !important;
+	}
+	.subscribe-card {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.footer-info {
+		flex-direction: column;
+	}
+	.copyright {
+		order: 3;
+		margin: 0 0 1rem 0;
+	}
+	.footer-contacts {
+		order: 2;
+		margin: 0 0 2rem 0;
+		max-width: 330px;
+		width: 100%;
+	}
+	.footer-logo {
+		order: 1;
+		margin: 0 0 2rem 0;
+	}
+	.footer {
+		height: 350px;
 	}
 }
 
 @media screen and (max-width: 900px) {
 	/*burger*/
-	.header {
-
-	}
-
 	.header-burger {
 		display: block;
 		position: relative;
 		width: 30px;
 		height: 20px;
-		z-index: 5;
+		z-index: 12;
+	}
+	.burger-active::before  {
+		transform: rotate(45deg);
+		transition: all .2s ease-in-out;
+	}
+	.burger-active::after {
+		transform: rotate(-45deg);
+		transition: all .2s ease-in-out;
+	}
+	.burger-active span {
+		transform: scale(0);
+	}
+	.burger-active {
+		height: 3px;
 	}
 	.header-burger::before,
 	.header-burger::after {
@@ -579,9 +730,11 @@ button {
 	}
 	.header-burger::before {
 		top: 0;
+		transition: all .2s ease-in-out;
 	}
 	.header-burger::after {
 		bottom: 0;
+		transition: all .2s ease-in-out;
 	}
 	.header-burger span {
 		width: 100%;
@@ -590,6 +743,7 @@ button {
 		position: absolute;
 		left: 0;
 		top: 9px;
+		transition: all .2s ease-in-out;
 	}
 	.menu-wrapper  {
 		position: fixed;
